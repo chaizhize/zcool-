@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <script type="text/javascript" src="./js/jquery.min.js"></script>
-  <!--<script type="text/javascript" src="./js/index.min.js"></script>-->
-
   <link rel="stylesheet" href="./css/built.min.css">
-  <!--<script src="./jqueryui/jquery-ui.js"></script>-->
-  <!--<link rel="stylesheet" href="./jqueryui/jquery-ui.css">-->
+  <script type="text/javascript" src="./zcool.js"></script>
   <title>PC端zcool页面</title>
 </head>
 <body>
@@ -161,28 +158,24 @@
 
 
 
-
-      $('.ul li').click(function (event) {
-        console.log('xxx')
-        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
-        $(this).addClass('active');// 添加当前元素的样式
-         var ind = $(".ul li").index(this);
-         $(".contentList .li").eq(ind).show().siblings().hide()
-        console.log(ind)
-      })
-
-      $('.sideNav li').click(function (event) {
-        console.log('xxx')
-        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
-        $(this).addClass('active');// 添加当前元素的样式
-        var abc = $(".sideNav li").index(this);
-        $(".contentList .li").eq(abc).show().siblings().hide()
-        console.log(ind)
-      })
-
-
-
-
+//
+//      $('.ul li').click(function (event) {
+//        console.log('xxx')
+//        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+//        $(this).addClass('active');// 添加当前元素的样式
+//         var ind = $(".ul li").index(this);
+//         $(".contentList .li").eq(ind).show().siblings().hide()
+//        console.log(ind)
+//      })
+//
+//      $('.sideNav li').click(function (event) {
+//        console.log('xxx')
+//        $(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+//        $(this).addClass('active');// 添加当前元素的样式
+//        var abc = $(".sideNav li").index(this);
+//        $(".contentList .li").eq(abc).show().siblings().hide()
+//        console.log(ind)
+//      })
   })
 </script>
 </body>

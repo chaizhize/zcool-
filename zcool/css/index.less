@@ -1,0 +1,419 @@
+@import "common/mixin";
+@import "common/reset";
+@import "common/animation";
+
+#wrap{        
+    .header{            
+            width: 100%;
+            height: 60px;
+            background: rgba(0,0,0,0.8);
+        .headerContent{
+            width: 980px;
+            height: 100%;
+            margin: 0 auto;
+            .logo{
+                float: left;
+                margin: 16px 20px 0 0;
+            }
+            nav{
+                float: right;
+                ul{
+                    .clearfix();
+                    li{
+                        float: left;
+                        width: 90px;
+                        line-height: 60px;
+                        text-align: center;
+                        &:hover{
+                            background:#fc0;
+                            a{
+                                color:black;
+                            }
+                        }
+                        &.active{
+                            background:#fc0;
+                            a{
+                                color:black;
+                            }
+                        }
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        position: relative;              
+        overflow: hidden;
+        width: 100%;                     
+        .sideNav{
+            position: fixed;
+            top: 50%;
+            right: 1%;
+            z-index: 3;
+            li{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid;
+                margin-top: 10px;
+                cursor:pointer;
+                &:hover{
+                    background: black;
+                    cursor:default;
+                }
+                &.active{
+                    background: black;
+                    cursor:default;
+                }
+            }
+        }
+        .contentList{
+            position: absolute;
+            left: 0;
+            top: 0;            
+            width: 100%;
+            height: 100%;                     
+            transition:1s top;                                   
+            .firstLi{
+                .lisCss();
+                background: url(../img/s1.jpg) no-repeat ;
+                overflow: hidden;
+                section{
+                   .first{                    
+                        width: 100%;
+                        height: 100%;
+                        .vertical();
+                        img{
+                            position:absolute;
+                            top: 50%; 
+                            left: 50%; 
+                            margin-left: -545px; 
+                            margin-top: -260px;
+                            transition: .5s opacity;
+                        }
+                    }      
+                }                                                                                                       
+            }
+            .secondLi{
+                .lisCss();                
+                background: url(../img/s2.jpg) no-repeat ;
+                overflow: hidden;
+                section{
+                    .second{                                             
+                        width: 100%;
+                        height: 100%;                   
+                        .vertical();
+                        margin: 0;                   
+                        .left{
+                            position: absolute;
+                            left: -140px;
+                            width: 837px;
+                            height: 437px;
+                            margin-top: 40px;
+                            z-index: 1;
+                           .photoList{
+                               width: 100%;
+                               height: 100%;
+                                li{
+                                    float: left;
+                                    margin-right: 20px;
+                                    text-align: center;
+                                    transition: 1s transform;                                                                    
+                                    img{
+                                        &:nth-child(1){
+                                           transform: translateY(0px);
+                                        }
+                                        &:nth-child(2){
+                                           transform: translateY(0px);
+                                        }
+                                        &:nth-child(3){
+                                           transform: translateY(0px);
+                                        }
+                                    }
+                                    p{
+                                        margin: 20px 0;
+                                        font-size: 18px;
+                                    } 
+                                    a{
+                                        margin-left: 80px;
+                                        background: #fc0;
+                                        width: 98px;
+                                        height: 30px;                   
+                                        background: url(../img/buy.jpg) no-repeat;
+                                        background-position: 50% 50%;
+                                    }
+                               }
+                           }
+                        }
+                        .right{
+                            position: absolute;
+                            right: -15%;
+                            margin-top: 5%;
+                            padding-right: 15px;
+                            border-right: 2px solid;
+                            transition: 1s transform;
+                            transform: translateY(0px);
+                            h1{
+                                font-size:34px; 
+                                color:#333; 
+                                font-weight:100;
+                                text-align: right;  
+                            }
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                font-size:18px; 
+                                color:#333;
+                                text-align: right;    
+                            }
+                            a{
+                               color:#333;
+                               text-align: right;  
+                            } 
+                        }
+                        .bg{
+                            position: absolute;
+                            right: -193px;
+                            bottom: 0;
+                            
+                        }
+                    }          
+                }                                                     
+            }
+            .thirdLi{
+                .lisCss(); 
+                background: url(../img/s3.jpg) no-repeat ;
+                overflow: hidden;               
+                section{
+                    .third{                    
+                        width: 100%;
+                        height: 100%;
+                        .vertical();                        
+                        .left{
+                            position: absolute;
+                            left: -145px;
+                            width: 837px;
+                            height: 437px;
+                            margin-top: 40px;
+                            z-index: 1;
+                           .photoList{
+                               width: 100%;
+                               height: 100%;
+                                li{
+                                    float: left;
+                                    margin-right: 20px;
+                                    text-align: center;
+                                    transition: 1s transform;                                                                    
+                                    img{                                      
+                                        &:nth-child(2){
+                                           transform: translateX(0px);
+                                        }
+                                        &:nth-child(3){
+                                           transform: translateX(0px);
+                                        }
+                                    }
+                                    p{
+                                        margin: 20px 0;
+                                        font-size: 18px;
+                                    } 
+                                    a{
+                                        margin-left: 80px;
+                                        background: #fc0;
+                                        width: 98px;
+                                        height: 30px;                   
+                                        background: url(../img/buy.jpg) no-repeat;
+                                        background-position: 50% 50%;
+                                    }
+                               }
+                           }
+                        }
+                        .right{
+                            position: absolute;
+                            right: -15%;
+                            margin-top: 5%;
+                            padding-right: 15px;
+                            border-right: 2px solid;
+                            transition: 1s transform;
+                            transform: translateX(0px);                            
+                            h1{
+                                font-size:34px; 
+                                color:#333; 
+                                font-weight:100;
+                                text-align: right;  
+                            }
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                font-size:18px; 
+                                color:#333;
+                                text-align: right;    
+                            }
+                            a{
+                               color:#333;
+                               text-align: right;  
+                            } 
+                        }
+                        .bg{
+                            position: absolute;
+                            right: -193px;
+                            bottom: 0;                            
+                        }
+                    }     
+                }                       
+                            
+            }
+            .fourLi{
+                .lisCss();
+                background: url(../img/s4.jpg) no-repeat ;
+                overflow: hidden;              
+                section{
+                    .four{                    
+                        width: 100%;
+                        height: 100%;
+                        .vertical();
+                        .left{
+                            position: absolute;
+                            left: -155px;
+                            width: 1000px;
+                            height: 437px;
+                            margin-top: 40px;
+                            z-index: 1;
+                           .photoList{
+                                width: 100%;
+                                height: 100%;                                                        
+                                li{                                                                
+                                    float: left;
+                                    margin-right: 20px;
+                                    text-align: center; 
+                                    transition: 2s;                                                                                                                                                      
+                                    p{
+                                        margin: 20px 0;
+                                        font-size: 18px;
+                                    } 
+                                    a{
+                                        margin-left: 80px;
+                                        background: #fc0;
+                                        width: 98px;
+                                        height: 30px;                   
+                                        background: url(../img/buy.jpg) no-repeat;
+                                        background-position: 50% 50%;
+                                    }
+                               }
+                           }
+                        }
+                        .right{
+                            position: absolute;
+                            right: -15%;
+                            margin-top: 5%;
+                            padding-right: 15px;
+                            border-right: 2px solid;
+                            transition: 2s opacity;
+                            opacity: 0;
+                            h1{
+                                font-size:34px; 
+                                color:#333; 
+                                font-weight:100;
+                                text-align: right;  
+                            }
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                font-size:18px; 
+                                color:#333;
+                                text-align: right;    
+                            }
+                            a{
+                               color:#333;
+                               text-align: right;  
+                            } 
+                        }
+                        .bg{
+                            position: absolute;
+                            right: -193px;
+                            bottom: 0;
+                            
+                        }
+                    }      
+                }                                                    
+            }
+            .fiveLi{
+                .lisCss();
+                background: url(../img/s5.jpg) no-repeat ;
+                overflow: hidden;                
+                section{
+                    .five{                    
+                        width: 100%;
+                        height: 100%;
+                        .vertical();
+                        .left{
+                            position: absolute;
+                            left: -145px;
+                            width: 1000px;
+                            height: 437px;
+                            margin-top: 40px;
+                            z-index: 1;
+                           .photoList{
+                               width: 100%;
+                               height: 100%;                                                      
+                                li{
+                                    float: left;
+                                    margin-right: 20px;
+                                    text-align: center;
+                                    transition: 1s transform;
+                                    transform: translate3d(-1000px,-800px,-500px) rotateX(145deg);                                                                                                                                                    
+                                    p{
+                                        margin: 20px 0;
+                                        font-size: 18px;
+                                    } 
+                                    a{
+                                        margin-left: 80px;
+                                        background: #fc0;
+                                        width: 98px;
+                                        height: 30px;                   
+                                        background: url(../img/buy.jpg) no-repeat;
+                                        background-position: 50% 50%;
+                                    }
+                               }
+                           }
+                        }
+                        .right{
+                            position: absolute;
+                            right: -15%;
+                            margin-top: 5%;
+                            padding-right: 15px;
+                            border-right: 2px solid;
+                            transition: 1s opacity;
+                            opacity: 0;   
+                            h1{
+                                font-size:34px; 
+                                color:#333; 
+                                font-weight:100;
+                                text-align: right;  
+                            }
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                font-size:18px; 
+                                color:#333;
+                                text-align: right;    
+                            }
+                            a{
+                               color:#333;
+                               text-align: right;  
+                            } 
+                        }
+                        .bg{
+                            position: absolute;
+                            right: -193px;
+                            bottom: 0;
+                            
+                        }
+                    }    
+                }                                                   
+            }
+        }
+    }
+}
